@@ -1,8 +1,8 @@
 # api-getaway-testing
 api-getaway testing server
-
+ 
 # Usage
-
+ 
 ```js
 const assert = require('assert');
 
@@ -69,7 +69,6 @@ assert.deepEqual(res.body, { response :'response' });
 assert(res.headers['content-type'] === 'application/json; charset=utf-8');
 ```
 
-    if() app = ;
 # API getApiGetawayTesting(object, port = 3000, app = express()) -> appServer
 
 
