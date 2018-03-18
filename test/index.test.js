@@ -50,7 +50,7 @@ const agent = supertest(api);
 
 describe('test to api getaway', () => {
     it('should return headers, body and statusCode', async() => {
-        const res = await agent.get('/test')
+        const res = await agent.post('/test')
             .send('testing')
             .expect(202);
         assert(res.text === 'response');
