@@ -1,0 +1,32 @@
+{
+  "name": "api-getaway-testing",
+  "version": "0.0.1",
+  "description": "module to test the api-getaway lambda integration",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --exit test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cereceres/api-getaway-testing.git"
+  },
+  "keywords": [
+    "lambda",
+    "api",
+    "test",
+    "integration",
+    "getaway"
+  ],
+  "author": "Jesus Cereceres",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cereceres/api-getaway-testing/issues"
+  },
+  "homepage": "https://github.com/Cereceres/api-getaway-testing#readme",
+  "dependencies": {
+    "aws-lambda-testing": "^0.2.6",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "supertest": "^3.0.0"
+  }
+}
