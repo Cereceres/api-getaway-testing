@@ -72,4 +72,19 @@ describe('test to api getaway', () => {
         assert.deepEqual(res.body, { response :'response' });
         assert(res.headers['content-type'] === 'application/json; charset=utf-8');
     });
+
+
+    it('should return headers, body and statusCode', async() => {
+        await agent.get('/test/other/params')
+            .query({ query:'query' })
+            .send({ data:'data' })
+            .expect(404);
+    });
+
+    it('should return headers, body and statusCode', async() => {
+        await agent.post('/test/otherNotExists/params')
+            .query({ query:'query' })
+            .send({ data:'data' })
+            .expect(404);
+    });
 });
