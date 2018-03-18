@@ -8,7 +8,7 @@ const assert = require('assert');
 
 const supertest = require('supertest');
 
-const apiGetway = require('../index');
+const apiGetway = require('api-getaway-testing');
 
 const api = apiGetway({
     '/test':(event, ctx, cb) => {
@@ -68,3 +68,26 @@ const res = await agent.post('/test/other/params')
 assert.deepEqual(res.body, { response :'response' });
 assert(res.headers['content-type'] === 'application/json; charset=utf-8');
 ```
+
+    if() app = ;
+# API getApiGetawayTesting(object, port = 3000, app = express()) -> appServer
+
+
+Receive a object what is a map between path and lambda handler:
+
+    {
+        path: handler
+    }
+
+or 
+
+    {
+        path: {
+            method: handler,
+            otherMethod: otherHandler
+        }
+    }
+
+You can pass a express instance with all middleware already attached.
+
+The only middleware attached by getApiGetawayTesting is body-parser.
