@@ -1,8 +1,9 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const addHandler = require('./lib/add-handler');
-
- module.exports = (pathToLambdaHadlerMap = {}, port = 3000, app = express()) => {
+const morgan = require('morgan')
+ module.exports = (pathToLambdaH adlerMap = {}, port = 3000, app = express()) => {
+    app.use(morgan('tiny'))
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: true }));
     addHandler(app, pathToLambdaHadlerMap);

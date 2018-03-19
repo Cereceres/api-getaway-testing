@@ -1,6 +1,6 @@
 {
   "name": "api-getaway-testing",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "module to test the api-getaway lambda integration",
   "main": "index.js",
   "scripts": {
@@ -27,6 +27,7 @@
     "aws-lambda-testing": "^0.2.6",
     "body-parser": "^1.18.2",
     "express": "^4.16.3",
+    "morgan": "^1.9.0",
     "supertest": "^3.0.0"
   }
 }
