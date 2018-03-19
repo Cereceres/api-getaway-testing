@@ -1,6 +1,6 @@
 {
   "name": "api-getaway-testing",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "module to test the api-getaway lambda integration",
   "main": "index.js",
   "scripts": {
