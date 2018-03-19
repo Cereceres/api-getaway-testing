@@ -61,6 +61,27 @@ describe('test to api getaway', () => {
             .send('testing')
             .expect(202);
         assert(res.text === 'response');
+    });
+
+    it('should return headers, body and statusCode', async() => {
+        const res = await agent.put('/test')
+            .send('testing')
+            .expect(202);
+        assert(res.text === 'response');
+    });
+
+    it('should return headers, body and statusCode', async() => {
+        const res = await agent.delete('/test')
+            .send('testing')
+            .expect(202);
+        assert(res.text === 'response');
+    });
+
+    it('should return headers, body and statusCode', async() => {
+        const res = await agent.get('/test')
+            .send('testing')
+            .expect(202);
+        assert(res.text === 'response');
         assert(res.headers['content-type'] === 'application/text; charset=utf-8');
     });
 
